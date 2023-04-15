@@ -380,10 +380,10 @@ button {
 }
 
 /* JOB */
-.studio-job {
+.job {
     padding-top: 0px;
 }
-.studio-job-title {
+.job__title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
@@ -391,19 +391,19 @@ button {
     letter-spacing: 0.03em;
     margin-bottom: 50px;
 }
-.studio-job-container {
+.job__list {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
 }
-.studio-job-container-img {
+.job__item {
     position: relative;
     display: flex;
     justify-content: center;
 }
-.studio-job-container-img-paragraph {
+.job__description {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -417,10 +417,6 @@ button {
     padding-bottom: 27px;
     background: var(--color-background-img-overlay);
     width: 100%;
-    /* top: 0; */
-    /* right: 0;
-    left: 0;
-    bottom: 0; */
 }
 
 /* TEAM */
