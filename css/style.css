@@ -298,7 +298,7 @@ button {
 /* STUDIO */
 
 /* SOLUTION */
-.studio-solution {
+.solution {
     background-image: linear-gradient(
             var(--color-background-section-solution-op),
             var(--color-background-section-solution-op)
@@ -308,7 +308,7 @@ button {
     background-position: 50% 50%;
     background-color: var(--color-background-section-solution);
 }
-.studio-solution-cointainer {
+.solution .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -317,7 +317,7 @@ button {
     padding-bottom: 200px;
     padding-top: 200px;
 }
-.studio-solution-title {
+.solution__title {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -327,7 +327,7 @@ button {
     color: var(--color-text-main-light);
     max-width: 696px;
 }
-.studio-solution-btn {
+.solution__btn {
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 16px;
@@ -341,7 +341,7 @@ button {
     padding: 10px 41px;
     transition: var(--trans-duration-tfunction);
 }
-.studio-solution-btn:is(:hover, :focus) {
+.solution__btn:is(:hover, :focus) {
     background-color: var(--color-text-main-light);
     color: var(--color-hover);
 }
@@ -783,7 +783,6 @@ button {
 .modal-form-checkbox input:checked {
     border: none;
     z-index: -1;
-    
 }
 /* .modal-form-checkbox input:checked  svg {
     transform: translateX(0);
