@@ -63,7 +63,7 @@ button {
     padding-top: 24px;
     padding-bottom: 25px;
 }
-.header-container {
+.header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -71,13 +71,13 @@ button {
     /* padding-top: 24px;
     padding-bottom: 25px; */
 }
-.header-container-nav {
+.menu {
     display: flex;
     align-items: center;
     gap: 93px;
 }
 
-.header-logo {
+.logo {
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
@@ -86,19 +86,15 @@ button {
     color: var(--color-hover);
     /* margin-right: 93px; */
 }
-.header-logo-span {
+.logo--black {
     color: var(--color-text-main-black);
 }
-.header-nav {
+.navigation {
     display: flex;
     align-items: center;
     gap: 46px;
-    /* margin-right: 371px; */
-    /* position: relative; */
-    /* padding-top: 32px;
-    padding-bottom: 32px; */
 }
-.header-nav-item {
+.navigation__link {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -109,13 +105,13 @@ button {
     /* margin-top: 32px;
     margin-bottom: 32px; */
 }
-.header-nav-item:is(:hover, :focus) {
+.navigation__link:is(:hover, :focus) {
     color: var(--color-hover);
 }
-.header-nav-item-active {
+.navigation__link--active {
     color: var(--color-hover);
 }
-.header-nav-item-active::after {
+.navigation__link--active::after {
     content: '';
     background-color: var(--color-hover);
     border-radius: 2px;
@@ -127,11 +123,11 @@ button {
     left: 0;
     transform: translateY(33px);
 }
-.header-contact {
+.contact {
     display: flex;
     gap: 30px;
 }
-.header-contact-link {
+.contact__link {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -144,7 +140,7 @@ button {
     fill: var(--color-text-main-grey);
     transition: color var(--trans-duration-tfunction), fill var(--trans-duration-tfunction);
 }
-.header-contact-link:is(:hover, :focus) {
+.contact__link:is(:hover, :focus) {
     color: var(--color-hover);
     fill: var(--color-hover);
 }
