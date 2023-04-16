@@ -495,7 +495,7 @@ button {
     border: 1px solid var(--color-hover);
 }
 /* PORTFOLIO */
-.portfolio-filter {
+.filters {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -504,22 +504,20 @@ button {
 }
 
 /* FILTER BUTTONS */
-.portfolio-filter-btn {
-    font-family: 'Roboto';
+.filters__btn {
     font-weight: 500;
-    font-size: 16px;
     line-height: 1.62;
     text-align: center;
     letter-spacing: 0.03em;
-    border-radius: 4px;
-    border-style: none;
     padding: 6px 22px;
     color: var(--color-text-main);
     background-color: var(--color-beckground-section-team);
     transition: color var(--trans-duration-tfunction),
         background-color var(--trans-duration-tfunction), box-shadow var(--trans-duration-tfunction);
+        width: fit-content;
+        height: fit-content;
 }
-.portfolio-filter-btn:is(:hover, :focus) {
+.filters__btn:is(:hover, :focus) {
     color: var(--color-text-main-light);
     background-color: var(--color-hover);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -527,29 +525,29 @@ button {
 }
 
 /* PROJECTS */
-.portfolio-projects {
+.projects {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
 }
-.portfolio-projects-figure {
+.projects__figure {
     transition: box-shadow var(--trans-duration-tfunction);
 }
-.portfolio-projects-figure:is(:hover, :focus) {
+.projects__figure:is(:hover, :focus) {
     cursor: pointer;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.portfolio-projects-figure:is(:hover, :focus) .portfolio-projects-figure-overlay {
+.projects__figure:is(:hover, :focus) .projects__overlay {
     transform: translateY(0);
 }
-.portfolio-projects-figure-img {
+.projects__img {
     position: relative;
     overflow: hidden;
 }
-.portfolio-projects-figure-overlay {
+.projects__overlay {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -558,7 +556,7 @@ button {
     transform: translateY(101%);
     transition: transform var(--trans-duration-tfunction);
 }
-.portfolio-projects-figure-overlay-description {
+.projects__description {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -570,7 +568,7 @@ button {
     height: 100%;
     padding: 49px 45px 49px 24px;
 }
-.portfolio-projects-figure-title {
+.projects__title {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -578,14 +576,14 @@ button {
     color: var(--color-text-main);
     margin-bottom: 4px;
 }
-.portfolio-projects-figure-description {
+.projects__kind {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
     color: var(--color-text-main-grey);
 }
-.portfolio-projects-figure-figcaption {
+.projects__figcaption {
     border-right: 1px solid var(--color-line-projects-figcaption);
     border-bottom: 1px solid var(--color-line-projects-figcaption);
     border-left: 1px solid var(--color-line-projects-figcaption);
