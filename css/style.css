@@ -84,10 +84,14 @@ button {
     line-height: 1.2;
     letter-spacing: 0.03em;
     color: var(--color-hover);
+    width: fit-content;
     /* margin-right: 93px; */
 }
 .logo--black {
     color: var(--color-text-main-black);
+}
+.logo--white {
+    color: var(--color-text-main-light);
 }
 .navigation {
     display: flex;
@@ -151,32 +155,18 @@ button {
     padding-top: 60px;
     padding-bottom: 60px;
 }
-.footer-box {
+.footer .container {
     display: flex;
     column-gap: 70px;
     flex-wrap: wrap;
 }
-.footer-container {
+.footer__address {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-/* FOOTER LOGO */
-.footer-logo {
-    font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-    color: var(--color-hover);
-    width: fit-content;
-}
-.footer-logo-span {
-    color: var(--color-text-main-light);
-}
-
 /* FOOTER ADDRESS */
-.footer-address {
+.address {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -187,23 +177,25 @@ button {
     width: fit-content;
     gap: 9px;
 }
-.footer-addres-link {
+.address__link {
     color: var(--color-text-main-light-op);
     width: fit-content;
     transition: color var(--trans-duration-tfunction);
 }
-.footer-addres-link:is(:hover, :focus) {
+.address__link:is(:hover, :focus) {
     color: var(--color-hover);
 }
 /* FOOTER SOCIAL */
-.footer-social {
+.footer__social {
     padding-top: 12px;
     height: fit-content;
-    /* padding-bottom: 100px; */
-    /* margin-left: 70px; */
+}
+.footer .social-media__icon {
+    background-color: var(--color-background-icon-footer);
+    fill: var(--color-text-main-light);
 }
 
-.footer-social-title {
+.footer__title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -212,17 +204,17 @@ button {
     color: var(--color-text-main-light);
     margin-bottom: 20px;
 }
-.footer-social-box {
+/* .footer-social-box {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
 .footer-social-box-img {
-    fill: var(--color-text-main-light);
+    
     padding: 12px;
     border-radius: 50%;
-    background-color: var(--color-background-icon-footer);
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -230,30 +222,20 @@ button {
 }
 .footer-social-box-img:is(:hover, :focus) {
     background-color: var(--color-hover);
-}
+} */
 
-.footer-form {
+.footer__form {
     padding-top: 12px;
     padding-left: 8px;
     height: fit-content;
 }
-.footer-form > p {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--color-text-main-light);
-    margin-bottom: 20px;
-}
-.footer-form form {
+.subscribe {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-wrap: wrap;
     gap: 12px;
 }
-.footer-form input {
+.subscribe__input {
     background-color: inherit;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -263,14 +245,21 @@ button {
     color: rgba(255, 255, 255, 0.3);
     outline: none;
 }
-.footer-form input[name='newsletter-email']:focus {
+.subscribe__input[name='newsletter-email']:focus {
     border: 1px solid var(--color-hover);
     color: var(--color-hover);
 }
-.footer-form input[name='newsletter-email']:focus::placeholder {
+.subscribe__input[name='newsletter-email']:focus::placeholder {
     color: var(--color-hover);
 }
-.footer-form button {
+.subscribe__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    fill: var(--color-text-main-light);
+}
+/* .footer-form button {
     background-color: var(--color-hover);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -288,8 +277,8 @@ button {
     fill: var(--color-text-main-light);
     transition: var(--trans-duration-tfunction);
     outline: none;
-}
-.footer-form button:is(:hover, :focus) {
+} */
+.subscribe__btn:is(:hover, :focus) {
     color: var(--color-hover);
     background-color: var(--color-text-main-light);
     fill: var(--color-hover);
@@ -327,21 +316,23 @@ button {
     color: var(--color-text-main-light);
     max-width: 696px;
 }
-.solution__btn {
+
+.btn {
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 16px;
-    line-height: 1.87;
+    line-height: 1.88;
     letter-spacing: 0.06em;
     color: var(--color-text-main-light);
     background-color: var(--color-hover);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border-style: none;
-    padding: 10px 41px;
+    width: 200px;
+    height: 50px;
     transition: var(--trans-duration-tfunction);
 }
-.solution__btn:is(:hover, :focus) {
+.btn:is(:hover, :focus) {
     background-color: var(--color-text-main-light);
     color: var(--color-hover);
 }
@@ -383,7 +374,7 @@ button {
 .job {
     padding-top: 0px;
 }
-.job__title {
+.section__title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
@@ -420,35 +411,27 @@ button {
 }
 
 /* TEAM */
-.studio-team {
+.team {
     background: var(--color-beckground-section-team);
 }
-.studio-team-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-    letter-spacing: 0.03em;
-    margin-bottom: 50px;
-}
-.studio-team-box {
+.team__list {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
 }
-.studio-team-box-img {
+.team__item {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     background-color: var(--color-text-main-light);
 }
-.studio-team-box-img-figcaption {
+.team__figcaption {
     padding-top: 30px;
     padding-bottom: 30px;
 }
-.studio-team-box-img-title {
+.team__title {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
@@ -456,7 +439,7 @@ button {
     letter-spacing: 0.03em;
     margin-bottom: 10px;
 }
-.studio-team-box-img-description {
+.team__description {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.18;
@@ -465,13 +448,13 @@ button {
     color: var(--color-text-main-grey);
     margin-bottom: 16px;
 }
-.studio-team-box-img-container {
+.social-media {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-.studio-team-box-img-container-svg {
+.social-media__icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -481,28 +464,21 @@ button {
     transition: fill var(--trans-duration-tfunction),
         background-color var(--trans-duration-tfunction);
 }
-.studio-team-box-img-container-svg:is(:hover, :focus) {
+.social-media__icon:is(:hover, :focus) {
     fill: var(--color-text-main-light);
     background-color: var(--color-hover);
 }
 
 /* CLIENTS */
-.studio-clients-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-    letter-spacing: 0.03em;
-    margin-bottom: 50px;
-}
-.studio-clients-box {
+
+.clients__list {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
 }
-.studio-clients-box-img {
+.clients__item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -514,7 +490,7 @@ button {
     fill: var(--color-icon-social);
     transition: fill var(--trans-duration-tfunction), border var(--trans-duration-tfunction);
 }
-.studio-clients-box-img:is(:hover, :focus) {
+.clients__item:is(:hover, :focus) {
     fill: var(--color-hover);
     border: 1px solid var(--color-hover);
 }
@@ -645,7 +621,7 @@ button {
     cursor: auto;
     padding: 40px;
 }
-.modal-close-btn {
+.modal__close {
     display: flex;
     fill: var(--color-text-main-black);
     background-color: inherit;
@@ -670,14 +646,14 @@ button {
 }
 
 /* MODAL FORM */
-.modal-form {
+.modal__form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-.modal > p {
+.modal__title {
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
@@ -685,7 +661,7 @@ button {
     letter-spacing: 0.03em;
     margin-bottom: 12px;
 }
-.modal-form-input {
+.modal__label {
     display: flex;
     flex-direction: column;
     font-size: 12px;
@@ -695,7 +671,7 @@ button {
     color: var(--color-text-main-grey);
 }
 
-.modal-form-box {
+.modal__card {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     display: flex;
@@ -708,23 +684,23 @@ button {
     outline: none;
     transition: var(--trans-duration-tfunction);
 }
-.modal-form-box svg {
+.modal__svg {
     position: absolute;
 }
-.modal-form-box input {
+.modal__input {
     border: none;
     width: 100%;
     outline: none;
     padding-left: 30px;
 }
-.modal-form-box:is(:active, :focus-within) {
+.modal__card:is(:active, :focus-within) {
     border: 1px solid var(--color-hover);
     fill: var(--color-hover);
 }
-.modal-form-box input:is(:active, :focus) {
+.modal__input:is(:active, :focus) {
     color: var(--color-hover);
 }
-.modal-form-box textarea {
+.modal__textarea {
     border: none;
     width: 100%;
     outline: none;
@@ -732,14 +708,14 @@ button {
     /* padding: 12px 16px; */
     height: 96px;
 }
-.modal-form-box textarea:is(:focus, :active) {
+.modal__textarea:is(:focus, :active) {
     color: var(--color-hover);
 }
-.modal-form-box textarea:focus::placeholder {
+.modal__textarea:focus::placeholder {
     color: var(--color-hover);
     transition: var(--trans-duration-tfunction);
 }
-.modal-form-checkbox {
+.modal__checkbox {
     margin-top: 10px;
     font-size: 14px;
     line-height: 1.71;
@@ -751,11 +727,11 @@ button {
     gap: 7px;
     cursor: pointer;
 }
-.modal-form-checkbox a {
+.modal__checkbox a {
     color: var(--color-hover);
     text-decoration: underline;
 }
-.modal-form-checkbox input {
+.modal__checkbox input {
     /* -moz-appearance: none;
     -webkit-appearance: none;
     -o-appearance: none; */
@@ -770,34 +746,22 @@ button {
     background-color: var(--color-text-main-light);
     cursor: pointer;
 }
-.modal-form-checkbox svg {
+.modal__checkbox svg {
     fill: var(--color-hover);
     position: absolute;
-    /* transform: translateX(-100%); */
-    /* display: none; */
 }
-.modal-form-checkbox input:checked {
+.modal__checkbox input:checked {
     border: none;
     z-index: -1;
 }
-/* .modal-form-checkbox input:checked  svg {
-    transform: translateX(0);
-    display: block;
-} */
-/* .modal-form-checkbox input:is(:hover) svg {
-    transform: translateX(0);
-} */
-.modal-form-checkbox span {
+.modal__checkbox span {
     position: relative;
     display: flex;
     /* overflow: hidden; */
 }
-/* .modal-form-checkbox div:is(:hover, :focus) svg {
-transform: translateX(0);
-} */
 
 /* MODAL FORM BUTTON */
-.modal-form button {
+.modal__btn {
     padding: 10px 76px;
     border: none;
     background-color: var(--color-hover);
@@ -817,7 +781,7 @@ transform: translateX(0);
 
     transition: var(--trans-duration-tfunction);
 }
-.modal-form button:is(:hover, :focus) {
+.modal__btn:is(:hover, :focus) {
     background-color: var(--color-background-section-solution);
     box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.5);
 }
