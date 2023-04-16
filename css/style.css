@@ -661,7 +661,7 @@ button {
     letter-spacing: 0.03em;
     margin-bottom: 12px;
 }
-.modal__label {
+.label {
     display: flex;
     flex-direction: column;
     font-size: 12px;
@@ -671,7 +671,7 @@ button {
     color: var(--color-text-main-grey);
 }
 
-.modal__card {
+.label__card {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     display: flex;
@@ -684,23 +684,23 @@ button {
     outline: none;
     transition: var(--trans-duration-tfunction);
 }
-.modal__svg {
+.label__icon {
     position: absolute;
 }
-.modal__input {
+.label__input {
     border: none;
     width: 100%;
     outline: none;
     padding-left: 30px;
 }
-.modal__card:is(:active, :focus-within) {
+.label__card:is(:active, :focus-within) {
     border: 1px solid var(--color-hover);
     fill: var(--color-hover);
 }
-.modal__input:is(:active, :focus) {
+.label__input:is(:active, :focus) {
     color: var(--color-hover);
 }
-.modal__textarea {
+.label__textarea {
     border: none;
     width: 100%;
     outline: none;
@@ -708,14 +708,14 @@ button {
     /* padding: 12px 16px; */
     height: 96px;
 }
-.modal__textarea:is(:focus, :active) {
+.label__textarea:is(:focus, :active) {
     color: var(--color-hover);
 }
-.modal__textarea:focus::placeholder {
+.label__textarea:focus::placeholder {
     color: var(--color-hover);
     transition: var(--trans-duration-tfunction);
 }
-.modal__checkbox {
+.checkbox {
     margin-top: 10px;
     font-size: 14px;
     line-height: 1.71;
@@ -727,14 +727,11 @@ button {
     gap: 7px;
     cursor: pointer;
 }
-.modal__checkbox a {
+.checkbox__link {
     color: var(--color-hover);
     text-decoration: underline;
 }
-.modal__checkbox input {
-    /* -moz-appearance: none;
-    -webkit-appearance: none;
-    -o-appearance: none; */
+.checkbox__input {
     appearance: none;
     width: 16px;
     height: 15px;
@@ -746,15 +743,15 @@ button {
     background-color: var(--color-text-main-light);
     cursor: pointer;
 }
-.modal__checkbox svg {
+.checkbox__icon {
     fill: var(--color-hover);
     position: absolute;
 }
-.modal__checkbox input:checked {
+.checkbox__input:checked {
     border: none;
     z-index: -1;
 }
-.modal__checkbox span {
+.checkbox__card {
     position: relative;
     display: flex;
     /* overflow: hidden; */
