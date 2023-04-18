@@ -38,7 +38,6 @@ a {
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--color-text-main);
-    box-sizing: border-box;
 }
 
 button {
@@ -56,6 +55,14 @@ button {
     padding-top: 94px;
     padding-bottom: 94px;
 }
+.section__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+}
 
 /* HEADER */
 .header {
@@ -67,13 +74,11 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* gap: 371px; */
-    /* padding-top: 24px;
-    padding-bottom: 25px; */
 }
 .menu {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 93px;
 }
 
@@ -85,7 +90,6 @@ button {
     letter-spacing: 0.03em;
     color: var(--color-hover);
     width: fit-content;
-    /* margin-right: 93px; */
 }
 .logo--black {
     color: var(--color-text-main-black);
@@ -106,8 +110,6 @@ button {
     color: var(--color-text-main);
     transition: color var(--trans-duration-tfunction);
     position: relative;
-    /* margin-top: 32px;
-    margin-bottom: 32px; */
 }
 .navigation__link:is(:hover, :focus) {
     color: var(--color-hover);
@@ -129,6 +131,8 @@ button {
 }
 .contact {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
 }
 .contact__link {
@@ -165,6 +169,29 @@ button {
     flex-direction: column;
     gap: 20px;
 }
+
+/* FOOTER SOCIAL */
+.footer__social {
+    padding-top: 12px;
+    height: fit-content;
+}
+
+.footer__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-text-main-light);
+    margin-bottom: 20px;
+}
+
+.footer__form {
+    padding-top: 12px;
+    padding-left: 8px;
+    height: fit-content;
+}
+
 /* FOOTER ADDRESS */
 .address {
     font-size: 14px;
@@ -185,50 +212,7 @@ button {
 .address__link:is(:hover, :focus) {
     color: var(--color-hover);
 }
-/* FOOTER SOCIAL */
-.footer__social {
-    padding-top: 12px;
-    height: fit-content;
-}
-.footer .social-media__icon {
-    background-color: var(--color-background-icon-footer);
-    fill: var(--color-text-main-light);
-}
-
-.footer__title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--color-text-main-light);
-    margin-bottom: 20px;
-}
-/* .footer-social-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-.footer-social-box-img {
-    
-    padding: 12px;
-    border-radius: 50%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color var(--trans-duration-tfunction);
-}
-.footer-social-box-img:is(:hover, :focus) {
-    background-color: var(--color-hover);
-} */
-
-.footer__form {
-    padding-top: 12px;
-    padding-left: 8px;
-    height: fit-content;
-}
+/*  FOOTER SUBSCRIBE */
 .subscribe {
     display: flex;
     align-items: center;
@@ -259,29 +243,55 @@ button {
     gap: 24px;
     fill: var(--color-text-main-light);
 }
-/* .footer-form button {
-    background-color: var(--color-hover);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    padding: 10px 28px 10px 42px;
-    gap: 24px;
+
+.subscribe__btn:is(:hover, :focus) {
+    color: var(--color-hover);
+    background-color: var(--color-text-main-light);
+    fill: var(--color-hover);
+}
+
+.btn {
+    font-family: 'Roboto';
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
     color: var(--color-text-main-light);
-    fill: var(--color-text-main-light);
+    background-color: var(--color-hover);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-style: none;
+    width: 200px;
+    height: 50px;
     transition: var(--trans-duration-tfunction);
-    outline: none;
-} */
-.subscribe__btn:is(:hover, :focus) {
-    color: var(--color-hover);
+}
+.btn:is(:hover, :focus) {
     background-color: var(--color-text-main-light);
-    fill: var(--color-hover);
+    color: var(--color-hover);
+}
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.social-media__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    border-radius: 50%;
+    fill: var(--color-icon-social);
+    transition: fill var(--trans-duration-tfunction),
+        background-color var(--trans-duration-tfunction);
+}
+.social-media__icon--footer {
+    background-color: var(--color-background-icon-footer);
+    fill: var(--color-text-main-light);
+}
+.social-media__icon:is(:hover, :focus) {
+    fill: var(--color-text-main-light);
+    background-color: var(--color-hover);
 }
 
 /* STUDIO */
@@ -315,26 +325,6 @@ button {
     text-transform: uppercase;
     color: var(--color-text-main-light);
     max-width: 696px;
-}
-
-.btn {
-    font-family: 'Roboto';
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    color: var(--color-text-main-light);
-    background-color: var(--color-hover);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border-style: none;
-    width: 200px;
-    height: 50px;
-    transition: var(--trans-duration-tfunction);
-}
-.btn:is(:hover, :focus) {
-    background-color: var(--color-text-main-light);
-    color: var(--color-hover);
 }
 
 /* ADVENTAGES */
@@ -374,14 +364,7 @@ button {
 .job {
     padding-top: 0px;
 }
-.section__title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-    letter-spacing: 0.03em;
-    margin-bottom: 50px;
-}
+
 .job__list {
     display: flex;
     justify-content: center;
@@ -448,26 +431,6 @@ button {
     color: var(--color-text-main-grey);
     margin-bottom: 16px;
 }
-.social-media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-.social-media__icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px;
-    border-radius: 50%;
-    fill: var(--color-icon-social);
-    transition: fill var(--trans-duration-tfunction),
-        background-color var(--trans-duration-tfunction);
-}
-.social-media__icon:is(:hover, :focus) {
-    fill: var(--color-text-main-light);
-    background-color: var(--color-hover);
-}
 
 /* CLIENTS */
 
@@ -514,8 +477,8 @@ button {
     background-color: var(--color-beckground-section-team);
     transition: color var(--trans-duration-tfunction),
         background-color var(--trans-duration-tfunction), box-shadow var(--trans-duration-tfunction);
-        width: fit-content;
-        height: fit-content;
+    width: fit-content;
+    height: fit-content;
 }
 .filters__btn:is(:hover, :focus) {
     color: var(--color-text-main-light);
@@ -607,6 +570,14 @@ button {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     cursor: not-allowed;
 }
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.is-hidden .modal {
+    transform: scale(2);
+}
 .modal {
     position: absolute;
     width: 528px;
@@ -619,38 +590,7 @@ button {
     cursor: auto;
     padding: 40px;
 }
-.modal__close {
-    display: flex;
-    fill: var(--color-text-main-black);
-    background-color: inherit;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    padding: 6px;
-    position: absolute;
-    top: 8px;
-    right: 8px;
-}
 
-.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    /* transform: scale(13) rotate(360deg) translate(-50%, -50%); */
-}
-.is-hidden .modal {
-    /* transform: rotate(360deg) translate(-50%, -50%) ; */
-    /* transform: scaleX(2) scaleY(2) scaleZ(-3) rotateX(360deg) rotateY(-360deg) rotateZ(360deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg) skewY(0deg); */
-    transform: scale(2);
-}
-
-/* MODAL FORM */
-.modal__form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
 .modal__title {
     font-weight: 700;
     font-size: 20px;
@@ -659,7 +599,15 @@ button {
     letter-spacing: 0.03em;
     margin-bottom: 12px;
 }
-.label {
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal__label {
     display: flex;
     flex-direction: column;
     font-size: 12px;
@@ -669,7 +617,7 @@ button {
     color: var(--color-text-main-grey);
 }
 
-.label__card {
+.modal__card {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     display: flex;
@@ -682,38 +630,38 @@ button {
     outline: none;
     transition: var(--trans-duration-tfunction);
 }
-.label__icon {
+.modal__card:is(:active, :focus-within) {
+    border: 1px solid var(--color-hover);
+    fill: var(--color-hover);
+}
+.modal__icon {
     position: absolute;
 }
-.label__input {
+.modal__input {
     border: none;
     width: 100%;
     outline: none;
     padding-left: 30px;
 }
-.label__card:is(:active, :focus-within) {
-    border: 1px solid var(--color-hover);
-    fill: var(--color-hover);
-}
+
 .label__input:is(:active, :focus) {
     color: var(--color-hover);
 }
-.label__textarea {
+.modal__textarea {
     border: none;
     width: 100%;
     outline: none;
     resize: none;
-    /* padding: 12px 16px; */
     height: 96px;
 }
-.label__textarea:is(:focus, :active) {
+.modal__textarea:is(:focus, :active) {
     color: var(--color-hover);
 }
-.label__textarea:focus::placeholder {
+.modal__textarea:focus::placeholder {
     color: var(--color-hover);
     transition: var(--trans-duration-tfunction);
 }
-.checkbox {
+.modal__checkbox {
     margin-top: 10px;
     font-size: 14px;
     line-height: 1.71;
@@ -725,11 +673,15 @@ button {
     gap: 7px;
     cursor: pointer;
 }
-.checkbox__link {
-    color: var(--color-hover);
-    text-decoration: underline;
+.modal__tab {
+    position: relative;
+    display: flex;
 }
-.checkbox__input {
+.modal__confirm-icon {
+    fill: var(--color-hover);
+    position: absolute;
+}
+.modal__confirm-input {
     appearance: none;
     width: 16px;
     height: 15px;
@@ -741,19 +693,18 @@ button {
     background-color: var(--color-text-main-light);
     cursor: pointer;
 }
-.checkbox__icon {
-    fill: var(--color-hover);
-    position: absolute;
-}
-.checkbox__input:checked {
+.modal__confirm-input:checked {
     border: none;
     z-index: -1;
 }
-.checkbox__card {
-    position: relative;
-    display: flex;
-    /* overflow: hidden; */
+.modal__privacy {
+    color: var(--color-hover);
+    text-decoration: underline;
 }
+
+
+
+
 
 /* MODAL FORM BUTTON */
 .modal__btn {
@@ -779,4 +730,15 @@ button {
 .modal__btn:is(:hover, :focus) {
     background-color: var(--color-background-section-solution);
     box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.5);
+}
+.modal__close-btn {
+    display: flex;
+    fill: var(--color-text-main-black);
+    background-color: inherit;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    padding: 6px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
 }
