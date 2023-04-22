@@ -6,9 +6,8 @@
         @include position();
         gap: 24px;
         fill: $colorTextMainLight;
+        padding: 10px 28px 10px 42px;
         &:is(:hover, :focus) {
-            color: $colorHover;
-            background-color: $colorTextMainLight;
             fill: $colorHover;
         }
     }
